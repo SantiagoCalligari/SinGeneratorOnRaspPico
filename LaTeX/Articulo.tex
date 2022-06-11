@@ -9,7 +9,7 @@
 
 \section*{Preámbulo}
 En este artículo vamos a contar el proceso sobre la generación de ondas sinusoidales en una placa de desarrollo, vamos a exponer todos los obstáculos que nos topamos, las soluciones que les dimos y las ideas tanto matemáticas como electrónicas que utilizamos para poder hacer esta idea una realidad que pueda ser replicada.\\
-Nuestra placa de desarrollo cuenta con algunos pines \textbf{G.P.I.O.} (General Purpouse Input/Output) que son utilizados para propósitos generales de entrada/salida. Nosotros vamos a utilizar uno de estos pines para llegar a nuestra onda sinusoidal, pero nos encontramos con un problema ¡No existen las ondas analógicas en el mundo digital! Nosotros contamos solamente con una función "prendido" que nos entrega 5V en nuestro pin y una función "apagado" que nos entrega 0V. Aquí entra nuestro primer concepto a explicar, la modulación por ancho de pulsos.
+Nuestra placa de desarrollo cuenta con algunos pines \textbf{G.P.I.O.} (General Purpouse Input/Output) que son utilizados para propósitos generales de entrada/salida. Nosotros vamos a utilizar uno de estos pines para llegar a nuestra onda sinusoidal, pero nos encontramos con un problema ¡No existen las ondas analógicas en el mundo digital! Nosotros contamos solamente con una función "prendido" que nos entrega $5V$ en nuestro pin y una función "apagado" que nos entrega $0V$. Aquí entra nuestro primer concepto a explicar, la modulación por ancho de pulsos.
 \section*{Modulación Por Ancho de Pulsos}
 \begin{tikzpicture}
 	\draw (-1.5,-1) -- (8.5,-1) -- (8.5,3.1) -- (-1.5,3.1) -- (-1.5,-1);
@@ -37,13 +37,15 @@ Nuestra placa de desarrollo cuenta con algunos pines \textbf{G.P.I.O.} (General 
 		coordinates{(0,2.5) (11,2.5)};
 \end{axis}
 \end{tikzpicture}\\
-Esto es una onda cuadrada, el único tipo de ondas que puede generar un microcontrolador. Desde aquí tenemos que llegar a una onda que sea un poco más parecida al seno que buscamos. Bien, esta onda particular está en 5V la mitad del tiempo y el resto se encuentra apagada ¿por qué no le ponemos un nombre al tiempo que está en 5V? ¡Ya sé! Lo vamos a llamar Duty Cycle (Ciclo de trabajo). Lo vamos a definir como $D_{c}$ y que sea igual al porcentaje de tiempo que está en 5V, en el caso de nuestra gráfica sería un $D_{c}$ = 50\%.\\\\
-Vamos a hacer un pequeño paréntesis para hablar de procesadores, a muy groso modo estos son un tipo de calculadoras extremadamente básicas y exorbitantemente rápidas. Dentro de sí hay un pequeño cristal que en nuestro caso oscila a \textit{133 MHz}, que equivale a 133 Millones de oscilaciones por segundo. Cada ciclo de reloj nuestro procesador puede tanto sumar, comparar o cargar. En el caso que nosotros encendamos nuestro pin cuando el numero de oscilaciones es par y lo apaguemos cuando sea impar, estaríamos generando una onda cuadrada de $D_c$ = 50\% que al oscilar tan extremadamente rápido entre esas dos condiciones nos generaría, a modo práctico una onda plana de un 50\% del voltaje total, o sea 2.5V (Onda roja) llamada voltaje efectivo.\\
-Con el $D_c$ podemos generar un $V_s$ desde 0V hasta los 5V ganamos la capacidad de generar ondas escalonadas, cuando modifiquemos el $D_c$ modificamos el $V_s$. Ahora tenemos que aprender como modificar el $D_c$ para poder generar algo parecido a un seno.
+Esto es una onda cuadrada, el único tipo de ondas que puede generar un microcontrolador. Desde aquí tenemos que llegar a una onda que sea un poco más parecida al seno que buscamos. Bien, esta onda particular está en 5V la mitad del tiempo y el resto se encuentra apagada ¿por qué no le ponemos un nombre al tiempo que está en $5V$? ¡Ya sé! Lo vamos a llamar Duty Cycle (Ciclo de trabajo). Lo vamos a definir como $D_{c}$ y que sea igual al porcentaje de tiempo que está en $5V$, en el caso de nuestra gráfica sería un $D_{c}$ = $50\%$.\\\\
+Vamos a hacer un pequeño paréntesis para hablar de procesadores, a muy groso modo estos son un tipo de calculadoras extremadamente básicas y exorbitantemente rápidas. Dentro de sí hay un pequeño cristal que en nuestro caso oscila a $133 MHz$, que equivale a $133$ Millones de oscilaciones por segundo. Cada ciclo de reloj nuestro procesador puede tanto sumar, comparar o cargar. En el caso que nosotros encendamos nuestro pin cuando el numero de oscilaciones es par y lo apaguemos cuando sea impar, estaríamos generando una onda cuadrada de $D_c$ = $50\%$ que al oscilar tan extremadamente rápido entre esas dos condiciones nos generaría, a modo práctico una onda plana de un $50\%$ del voltaje total, o sea $2.5V$ (Onda roja) llamada voltaje efectivo.\\
+Con el $D_c$ podemos generar un $V_s$ desde $0V$ hasta los $5V$ ganamos la capacidad de generar ondas escalonadas, cuando modifiquemos el $D_c$ modificamos el $V_s$. Ahora tenemos que aprender como modificar el $D_c$ para poder generar algo parecido a un seno.
 
 
 \subsection*{Tabla de consulta}
-El seno es una función periódica, con periodo T = $\frac{1}{F}$ = 2$\pi$ entonces podemos llegar a que no hay que calcular el seno con potencia del procesador cada vez que lo necesitamos, solamente nos fijamos en una tabla con un $\Delta$x particular. Una tabla de ejemplo sería ésta;
+El seno es una función periódica, con periodo T = $\frac{1}{F} = 2\pi$. Si calculamos $sen(2)$ es exactamente lo mismo que calcular $sen(2+2\pi)$, con esto en mente podríamos no precisar de calcular cada vez el seno de un numero para generar nuestra onda sino tener almacenado el resultado de un $f(x)=y$ como la tabla siguiente que el valor de $x$ comienza en $0$° y va escalando de a $22.5$° (Este escalado es conocido como $\Delta x$) hasta llegar a los $337.5$° para luego reiniciar el ciclo y volver a leer desde $0$°.\\
+Si llenamos una tabla con estos valores podemos conseguir una tabla de consulta, a la cual llegaríamos y preguntaríamos: \\
+Señora tabla ¿Cual es el resultado de $sen(22.5$°$)$? y ella nos responderá extremadamente rápido ¡$0.7071$!
 \begin{table}[h!]
 	\begin{tabular}{|c|c|c|c|} 
 		\hline
@@ -53,7 +55,7 @@ El seno es una función periódica, con periodo T = $\frac{1}{F}$ = 2$\pi$ enton
 		-1.0000 &-0.9239 &-0.7071 &-0.3827  \\\hline
 	\end{tabular}
 \end{table}\\
-Lo que genera un seno de esta forma;\\
+Esta tabla de senos con $\Delta x = 22.5$° genera la o\\
 \begin{tikzpicture}
 	\draw (-1.5,-1.5) -- (6.3,-1.5) -- (6.3,3.1) -- (-1.5,3.1) -- (-1.5,-1.5);
 	\begin{axis}[
