@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.4)  5 JUN 2022 02:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.4)  11 JUN 2022 01:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -544,54 +544,38 @@ ryfpu.code.tex)
 \tikz@math@dimen=\dimen274
 \tikz@math@toks=\toks38
 )
-\enitdp@todolist=\count303
-
-(C:\Users\Santiago\AppData\Roaming\MiKTeX\tex/latex/psnfss\pifont.sty
-Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
-LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
-
-
-(C:\Users\Santiago\AppData\Roaming\MiKTeX\tex/latex/psnfss\upzd.fd
-File: upzd.fd 2001/06/04 font definitions for U/pzd.
-)
-LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
-
-
-(C:\Users\Santiago\AppData\Roaming\MiKTeX\tex/latex/psnfss\upsy.fd
-File: upsy.fd 2001/06/04 font definitions for U/psy.
-))
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 28.
-
-(Articulo.aux)
+h' as default language. on input line 7.
+ (Articulo.aux)
 \openout1 = `Articulo.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
- (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+
+(C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count304
+\scratchcounter=\count303
 \scratchdimen=\dimen275
 \scratchbox=\box73
-\nofMPsegments=\count305
-\nofMParguments=\count306
+\nofMPsegments=\count304
+\nofMParguments=\count305
 \everyMPshowfont=\toks39
-\MPscratchCnt=\count307
+\MPscratchCnt=\count306
 \MPscratchDim=\dimen276
-\MPnumerator=\count308
-\makeMPintoPDFobject=\count309
+\MPnumerator=\count307
+\makeMPintoPDFobject=\count308
 \everyMPtoPDFconversion=\toks40
 ) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -607,52 +591,57 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 28.
+or `english'. on input line 7.
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 28.
+ on input line 7.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
+Overfull \hbox (16.05626pt too wide) in paragraph at lines 11--13
+\OT1/cmr/m/n/10 pouse In-put/Output) que son uti-liza-dos para prop^^Sositos ge
+n-erales de en-trada/salida.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--43
 
  []
 
 [1
 
 {C:/Users/Santiago/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-[2] (Articulo.aux) ) 
+[2] [3] (Articulo.aux) ) 
 Here is how much of TeX's memory you used:
- 28221 strings out of 478614
- 753492 string characters out of 2852929
- 1111199 words of memory out of 3000000
- 45952 multiletter control sequences out of 15000+600000
- 478122 words of font info for 62 fonts, out of 8000000 for 9000
+ 28148 strings out of 478614
+ 752132 string characters out of 2852929
+ 1113199 words of memory out of 3000000
+ 45891 multiletter control sequences out of 15000+600000
+ 477468 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 100i,18n,104p,800b,2172s stack positions out of 10000i,1000n,20000p,200000b,80000s
-<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmb
-x12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/P
-rogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/
-Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Articulo.pdf (2 pages, 121187 bytes).
+ 100i,18n,104p,800b,2174s stack positions out of 10000i,1000n,20000p,200000b,80000s
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program 
+Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb
+><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program
+ Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on Articulo.pdf (3 pages, 132132 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
+ 65 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
