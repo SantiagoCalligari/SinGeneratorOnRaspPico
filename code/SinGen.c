@@ -28,9 +28,9 @@ int main()
         pwm_set_wrap(slice_num, 20000); 
         //(x<180) ? setDuty(valores[x], slice_num): setDuty(valores[x]-10000, slice_num);
         setDuty(valores[x], slice_num);
-        sleep_us(500);
+        sleep_us(1000);
         x++;
-        (x==1440) ? x = 0: x;
+        (x==20000) ? x = 0: x;
     }
     // Note we could also use pwm_set_gpio_level(gpio, x) which looks up the
     // correct slice and channel for a given GPIO.
