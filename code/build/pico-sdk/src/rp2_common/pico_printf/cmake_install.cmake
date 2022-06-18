@@ -1,4 +1,4 @@
-# Install script for directory: /home/santiago/Politecnico2022/pico-sdk/src/rp2_common/pico_printf
+# Install script for directory: /home/santiago/.pico-sdk/src/rp2_common/pico_printf
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

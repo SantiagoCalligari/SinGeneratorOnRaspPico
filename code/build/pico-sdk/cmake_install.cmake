@@ -1,4 +1,4 @@
-# Install script for directory: /home/santiago/Politecnico2022/pico-sdk
+# Install script for directory: /home/santiago/.pico-sdk
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,9 +39,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build/pico-sdk/tools/cmake_install.cmake")
-  include("/home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build/pico-sdk/src/cmake_install.cmake")
-  include("/home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build/pico-sdk/docs/cmake_install.cmake")
+  include("/home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build/pico-sdk/tools/cmake_install.cmake")
+  include("/home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build/pico-sdk/src/cmake_install.cmake")
+  include("/home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build/pico-sdk/docs/cmake_install.cmake")
 
 endif()
 

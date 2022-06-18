@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code
+CMAKE_SOURCE_DIR = /home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build
+CMAKE_BINARY_DIR = /home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build/CMakeFiles /home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build/pico-sdk/src/common/pico_usb_reset_interface//CMakeFiles/progress.marks
-	cd /home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/common/pico_usb_reset_interface/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build/CMakeFiles 0
+	cd /home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build/CMakeFiles /home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build/pico-sdk/src/common/pico_usb_reset_interface//CMakeFiles/progress.marks
+	cd /home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/common/pico_usb_reset_interface/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/common/pico_usb_reset_interface/clean
+	cd /home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/common/pico_usb_reset_interface/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,17 +103,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/common/pico_usb_reset_interface/preinstall
+	cd /home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/common/pico_usb_reset_interface/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/common/pico_usb_reset_interface/preinstall
+	cd /home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/common/pico_usb_reset_interface/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -135,6 +135,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

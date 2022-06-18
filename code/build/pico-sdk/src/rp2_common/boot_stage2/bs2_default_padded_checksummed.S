@@ -1,4 +1,4 @@
-// Padded and checksummed version of: /home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
+// Padded and checksummed version of: /home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
 
 .cpu cortex-m0plus
 .thumb

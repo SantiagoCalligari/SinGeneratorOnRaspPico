@@ -1,4 +1,4 @@
-# Install script for directory: /home/santiago/Politecnico2022/pico-sdk/docs
+# Install script for directory: /home/santiago/.pico-sdk/docs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

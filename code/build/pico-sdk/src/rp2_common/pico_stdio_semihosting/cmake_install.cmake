@@ -1,4 +1,4 @@
-# Install script for directory: /home/santiago/Politecnico2022/pico-sdk/src/rp2_common/pico_stdio_semihosting
+# Install script for directory: /home/santiago/.pico-sdk/src/rp2_common/pico_stdio_semihosting
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

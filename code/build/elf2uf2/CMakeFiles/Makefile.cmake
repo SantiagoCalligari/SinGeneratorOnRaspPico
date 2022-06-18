@@ -7,11 +7,11 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "/home/santiago/.pico-sdk/src/common/boot_uf2/CMakeLists.txt"
+  "/home/santiago/.pico-sdk/tools/elf2uf2/CMakeLists.txt"
   "CMakeFiles/3.23.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.23.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.23.1/CMakeSystem.cmake"
-  "/home/santiago/Politecnico2022/pico-sdk/src/common/boot_uf2/CMakeLists.txt"
-  "/home/santiago/Politecnico2022/pico-sdk/tools/elf2uf2/CMakeLists.txt"
   "/usr/share/cmake/Modules/CMakeCCompiler.cmake.in"
   "/usr/share/cmake/Modules/CMakeCCompilerABI.c"
   "/usr/share/cmake/Modules/CMakeCInformation.cmake"

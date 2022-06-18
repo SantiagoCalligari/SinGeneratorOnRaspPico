@@ -4,16 +4,16 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "/home/santiago/Politecnico2022/pico-sdk/tools/elf2uf2"
-  "/home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build/elf2uf2"
-  "/home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build/elf2uf2"
-  "/home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build/elf2uf2/tmp"
-  "/home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build/elf2uf2/src/ELF2UF2Build-stamp"
-  "/home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build/elf2uf2/src"
-  "/home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build/elf2uf2/src/ELF2UF2Build-stamp"
+  "/home/santiago/.pico-sdk/tools/elf2uf2"
+  "/home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build/elf2uf2"
+  "/home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build/elf2uf2"
+  "/home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build/elf2uf2/tmp"
+  "/home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build/elf2uf2/src/ELF2UF2Build-stamp"
+  "/home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build/elf2uf2/src"
+  "/home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build/elf2uf2/src/ELF2UF2Build-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/home/santiago/Politecnico2022/Coba/SinGeneratorOnRaspPico/code/build/elf2uf2/src/ELF2UF2Build-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/build/elf2uf2/src/ELF2UF2Build-stamp/${subDir}")
 endforeach()
