@@ -50,7 +50,4 @@ CMakeFiles/SinGen.dir/SinGen.c.obj: \
  /home/santiago/.pico-sdk/src/rp2_common/hardware_pwm/include/hardware/pwm.h \
  /home/santiago/.pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pwm.h \
  /home/santiago/.pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pwm.h \
- /home/santiago/.pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
- /home/santiago/.pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/clocks.h \
- /home/santiago/.pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h \
  /home/santiago/poli22/Coba/SinGeneratorOnRaspPico/code/tabla.h

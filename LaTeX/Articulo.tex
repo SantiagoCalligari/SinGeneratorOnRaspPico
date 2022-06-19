@@ -1,6 +1,16 @@
 \documentclass[]{article}
-\usepackage{enumitem,amssymb,tikz,siunitx, pgfplots}
+\usepackage{enumitem,amssymb,tikz,siunitx, pgfplots, hyperref,minted}
 \usetikzlibrary{calc,matrix, arrows.meta, positioning, decorations,decorations.markings, math}
+\usemintedstyle{dracula}
+\usepackage[spanish]{babel} % To obtain English text with the blindtext package
+\usepackage{blindtext}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=blue,
+	pdfpagemode=FullScreen,
+}
 %opening
 \title{Generador De Ondas Sobre Raspberry Pi Pico}
 \author{Santiago Calligari, Gerónimo Nestares}
@@ -39,7 +49,7 @@ Nuestra placa de desarrollo cuenta con algunos pines \textbf{G.P.I.O.} (General 
 \end{tikzpicture}\\
 Esto es una onda cuadrada, el único tipo de ondas que puede generar un microcontrolador. Desde aquí tenemos que llegar a una onda que sea un poco más parecida al seno que buscamos. Bien, esta onda particular está en 5V la mitad del tiempo y el resto se encuentra apagada ¿por qué no le ponemos un nombre al tiempo que está en $5V$? ¡Ya sé! Lo vamos a llamar Duty Cycle (Ciclo de trabajo). Lo vamos a definir como $D_{c}$ y que sea igual al porcentaje de tiempo que está en $5V$, en el caso de nuestra gráfica sería un $D_{c}$ = $50\%$.\\\\
 Vamos a hacer un pequeño paréntesis para hablar de procesadores, a muy groso modo estos son un tipo de calculadoras extremadamente básicas y exorbitantemente rápidas. Dentro de sí hay un pequeño cristal que en nuestro caso oscila a $133 MHz$, que equivale a $133$ Millones de oscilaciones por segundo. Cada ciclo de reloj nuestro procesador puede tanto sumar, comparar o cargar. En el caso que nosotros encendamos nuestro pin cuando el numero de oscilaciones es par y lo apaguemos cuando sea impar, estaríamos generando una onda cuadrada de $D_c$ = $50\%$ que al oscilar tan extremadamente rápido entre esas dos condiciones nos generaría, a modo práctico una onda plana de un $50\%$ del voltaje total, o sea $2.5V$ (Onda roja) llamada voltaje efectivo.\\
-Con el $D_c$ podemos generar un $V_s$ desde $0V$ hasta los $5V$ ganamos la capacidad de generar ondas escalonadas, cuando modifiquemos el $D_c$ modificamos el $V_s$. Ahora tenemos que aprender como modificar el $D_c$ para poder generar algo parecido a un seno.
+Con el $D_c$ podemos generar un $V_e$ desde $0V$ hasta los $5V$ ganamos la capacidad de generar ondas escalonadas, cuando modifiquemos el $D_c$ modificamos el $V_e$. Ahora tenemos que aprender como modificar el $D_c$ para poder generar algo parecido a un seno.
 
 
 \subsection*{Tabla de consulta}
@@ -57,12 +67,12 @@ Señora tabla ¿Cual es el resultado de $sen(22.5$°$)$? y ella nos responderá 
 \end{table}\\
 Esta tabla de senos con $\Delta x = 22.5$° genera la o\\
 \begin{tikzpicture}
-	\draw (-1.5,-1.5) -- (6.3,-1.5) -- (6.3,3.1) -- (-1.5,3.1) -- (-1.5,-1.5);
+	\draw (-1.5,-1.5) -- (10.9,-1.5) -- (10.9,3.1) -- (-1.5,3.1) -- (-1.5,-1.5);
 	\begin{axis}[
 		legend style={nodes = {scale=0.6, transform shape}, at={(1.11,-0.2)}},
 		legend entries={$Seno\ Sobre\ Tabla\ De\ Consulta$\\$Seno\ Sobre\ Tabla\ De\ Consulta\ 36\ Elementos$\\},
 		ymajorgrids=true,
-		width=7cm,
+		width=11cm,
 		height=4cm,
 		x axis line style={-stealth},
 		y axis line style={-stealth},
@@ -86,6 +96,64 @@ Esta tabla de senos con $\Delta x = 22.5$° genera la o\\
 Desde la gráfica de estas dos funciones podemos deducir que mientras más elementos tenga nuestras tablas de consulta mayor va a ser la precisión del seno.
 Sabiendo el valor de los senos en un punto X podemos llegar a un valor de $D_{c}$ para poder generar una onda cuasi analógica.
 
-\section*{El Principal Problema}
-Nuestra placa de desarrollo, la RP2040 no cuenta con un F.P.U. debemos usar nuestro A.L.U. para simular coma flotante desde assembler debemos crear nuestro dato.
+\section*{Librería PWM}
+	
+	Ya es momento de ensuciarse las manos, vamos a hablar de código! Gracias a esta librería podemos hacer realidad este proyecto de generar ondas sinusoidales. Con lo aprendido hasta aquí y con la lectura de ``\href{https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf}{\underline{Raspberry Pico SDK}}" podemos empezar a codear, vamos a empezar a explicar nuestro código.\\
+	\begin{minted}[bgcolor=black, autogobble]{c}
+		#include "pico/stdlib.h"
+		#include "hardware/pwm.h"
+		#include "tabla.h"       //Nuestras Dos Tablas de consulta.
+		#define SONIDO_OUT 0     //Pin de salida.
+		#define ON 1
+		#define OFF 0
+		#define RESOLUCION 512   //Cantidad De Valores de Nuestra 
+		//Tabla de Consulta de Senos
+		#define A PWM_CHAN_A     //Abreviaturas
+		#define PWM GPIO_FUNC_PWM//Abreviaturas
+		
+		float Hz(int frecuencia)
+		{return hertz[frecuencia];}
+		
+		void setDuty(int valor, int canal)
+		{pwm_set_chan_level(canal, A, valor);}//Mandamos nuestra señal
+		//por el canal hasta el 
+		//valor dado.
+		
+		
+		
+		int main() 
+		{                                      
+			int iterar = 0;//Creamos un canal PWM en el pin de Sonido
+			int canal = pwm_gpio_to_slice_num(SONIDO_OUT);
+			//Convertimos el pin de sonido de GPIO a PWM.
+			gpio_set_function(SONIDO_OUT, PWM);
+			pwm_set_enabled(canal, true);//Iniciamos PWM en el canal      
+			while(1) //Loop Infinito
+			{
+				//Ponemos la ventana igual a nuestra Resolucion.
+				pwm_set_wrap(canal, RESOLUCION*2);
+				setDuty(valores[iterar], canal);
+				//dormimos el tiempo suficiente para nuestra F.
+				sleep_us(Hz(X));                
+				(iterar == RESOLUCION-1) ? iterar = 0 : iterar++;
+			}
+		}
+	\end{minted}
+Con estas sencillas lineas de código podemos generar nuestras ondas, allí podemos ver dos cosas interesantes, la función $Hz$ y la $X$ dentro de ella, esa pequeña $X$ puede tomar el valor de cualquier numero entre $1$ y $20000$ para generar una onda sinusoidal de amplitud $1$ y frecuencia $X$. Ahora ¿Cómo llegamos a la función Hz? Esta es una simple tabla de consulta, nuevamente. 
+\section*{¡Tablas de Consulta al ataque!}
+	Como hemos observado las tablas de consulta son una forma liviana de conocer un resultado estático sin la necesidad de calcularlo. Por ese motivo llegamos a la conclusión que la mejor forma de manejar frecuencia de nuestra onda es con otra tabla de consulta.
+\section*{Controlar frecuencia de la Onda}
+	Con el fin de controlar la frecuencia de nuestra onda vamos a utilizar la librería ``\href{https://raspberrypi.github.io/pico-sdk-doxygen/group__hardware__pwm.html}{\textit{hardware/pwm.h}}''.\\
+	Vamos a comentarle la idea matemática tras esto.
+	Para jugar con la frecuencia de una onda contamos con 3 valores;
+	\begin{description}
+		\item [Wrap] Es la cantidad de ciclos de reloj pasan hasta que el reloj vuelve a 0.
+		\item [Step] Cuantas celdas recorremos por paso.
+		\item [Sleep] Es la cantidad de tiempo que espera el procesador antes de ejecutar la próxima orden.
+	\end{description}
+	Vamos a comenzar a calcular:\\ 
+	Nuestra tabla de senos tiene $512$ valores que van de $0$ a $1024$ por conveniencia y para limitar el uso de flotantes al menos posible.
+	Tenemos un reloj $PWM$ de $125MHz$ lo que nos muestra una cantidad de $125000000$ ciclos por segundo, aproximadamente $8 Nano segundos$ por ciclo. Nuestro Wrap va a estar capado a $1024$ ciclos por conveniencia, cada vez que cambiemos el $D_{c}$ tenemos un tiempo de $Wrap*8ns$ donde no es posible hacer nada. Eso nos da una $8196ns$ donde no pasa nada.
+	La fórmula para la frecuencia de nuestra onda sinusoidal es:
+	\[ f =  \]
 \end{document}

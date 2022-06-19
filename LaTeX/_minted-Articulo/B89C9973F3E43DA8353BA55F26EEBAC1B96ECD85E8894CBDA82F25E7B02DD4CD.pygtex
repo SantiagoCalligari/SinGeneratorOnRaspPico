@@ -1,0 +1,40 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZdq{}pico/stdlib.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZdq{}hardware/pwm.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZdq{}tabla.h\PYGZdq{}}\PYG{c+c1}{       //Nuestras Dos Tablas de consulta.}
+\PYG{c+cp}{\PYGZsh{}define SONIDO\PYGZus{}OUT 0     }\PYG{c+c1}{//Pin de salida.}
+\PYG{c+cp}{\PYGZsh{}define ON 1}
+\PYG{c+cp}{\PYGZsh{}define OFF 0}
+\PYG{c+cp}{\PYGZsh{}define RESOLUCION 512   }\PYG{c+c1}{//Cantidad De Valores de Nuestra}
+\PYG{c+c1}{//Tabla de Consulta de Senos}
+\PYG{c+cp}{\PYGZsh{}define A PWM\PYGZus{}CHAN\PYGZus{}A     }\PYG{c+c1}{//Abreviaturas}
+\PYG{c+cp}{\PYGZsh{}define PWM GPIO\PYGZus{}FUNC\PYGZus{}PWM}\PYG{c+c1}{//Abreviaturas}
+
+\PYG{k+kt}{float}\PYG{+w}{ }\PYG{n+nf}{Hz}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{frecuencia}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}\PYG{k}{return}\PYG{+w}{ }\PYG{n}{hertz}\PYG{p}{[}\PYG{n}{frecuencia}\PYG{p}{];\PYGZcb{}}
+
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{setDuty}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{valor}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{canal}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}\PYG{n}{pwm\PYGZus{}set\PYGZus{}chan\PYGZus{}level}\PYG{p}{(}\PYG{n}{canal}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{A}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{valor}\PYG{p}{);\PYGZcb{}}\PYG{c+c1}{//Mandamos nuestra señal}
+\PYG{c+c1}{//por el canal hasta el}
+\PYG{c+c1}{//valor dado.}
+
+
+
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{iterar}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{c+c1}{//Creamos un canal PWM en el pin de Sonido}
+\PYG{+w}{	}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{canal}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{pwm\PYGZus{}gpio\PYGZus{}to\PYGZus{}slice\PYGZus{}num}\PYG{p}{(}\PYG{n}{SONIDO\PYGZus{}OUT}\PYG{p}{);}
+\PYG{+w}{	}\PYG{c+c1}{//Convertimos el pin de sonido de GPIO a PWM.}
+\PYG{+w}{	}\PYG{n}{gpio\PYGZus{}set\PYGZus{}function}\PYG{p}{(}\PYG{n}{SONIDO\PYGZus{}OUT}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{PWM}\PYG{p}{);}
+\PYG{+w}{	}\PYG{n}{pwm\PYGZus{}set\PYGZus{}enabled}\PYG{p}{(}\PYG{n}{canal}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nb}{true}\PYG{p}{);}\PYG{c+c1}{//Iniciamos PWM en el canal}
+\PYG{+w}{	}\PYG{k}{while}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{c+c1}{//Loop Infinito}
+\PYG{+w}{	}\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{c+c1}{//Ponemos la ventana igual a nuestra Resolucion.}
+\PYG{+w}{		}\PYG{n}{pwm\PYGZus{}set\PYGZus{}wrap}\PYG{p}{(}\PYG{n}{canal}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{RESOLUCION}\PYG{o}{*}\PYG{l+m+mi}{2}\PYG{p}{);}
+\PYG{+w}{		}\PYG{n}{setDuty}\PYG{p}{(}\PYG{n}{valores}\PYG{p}{[}\PYG{n}{iterar}\PYG{p}{],}\PYG{+w}{ }\PYG{n}{canal}\PYG{p}{);}
+\PYG{+w}{		}\PYG{c+c1}{//dormimos el tiempo suficiente para nuestra F.}
+\PYG{+w}{		}\PYG{n}{sleep\PYGZus{}us}\PYG{p}{(}\PYG{n}{Hz}\PYG{p}{(}\PYG{n}{X}\PYG{p}{));}
+\PYG{+w}{		}\PYG{p}{(}\PYG{n}{iterar}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{RESOLUCION}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{?}\PYG{+w}{ }\PYG{n}{iterar}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n}{iterar}\PYG{o}{++}\PYG{p}{;}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
