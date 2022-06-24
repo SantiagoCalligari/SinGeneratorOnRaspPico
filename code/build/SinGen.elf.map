@@ -64,7 +64,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/SinGen.dir/SinGen.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/SinGen.dir/SinGen.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/SinGen.dir/SinGen.c.obj
- .text.Hz       0x0000000000000000        0xc CMakeFiles/SinGen.dir/SinGen.c.obj
  .text.setDuty  0x0000000000000000       0x24 CMakeFiles/SinGen.dir/SinGen.c.obj
  .text          0x0000000000000000        0x0 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
@@ -205,10 +204,14 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
  .text.repeating_timer_callback
                 0x0000000000000000       0x1c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
+ .text.sleep_until_callback
+                0x0000000000000000       0x30 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
  .rodata.alarm_pool_dump_key.str1.4
                 0x0000000000000000        0xf CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_dump_key
                 0x0000000000000000       0x34 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
+ .text.alarm_pool_add_alarm_at.constprop.0
+                0x0000000000000000      0x11c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_get_default
                 0x0000000000000000        0x8 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_create
@@ -227,6 +230,10 @@ Discarded input sections
                 0x0000000000000000       0x98 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_dump
                 0x0000000000000000       0x34 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
+ .text.sleep_until
+                0x0000000000000000       0xac CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
+ .text.sleep_us
+                0x0000000000000000       0x30 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
  .text.sleep_ms
                 0x0000000000000000       0x38 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
  .text.best_effort_wfe_or_timeout
@@ -262,6 +269,8 @@ Discarded input sections
                 0x0000000000000000       0x54 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.busy_wait_ms
                 0x0000000000000000       0x88 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .text.busy_wait_until
+                0x0000000000000000       0x20 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text          0x0000000000000000        0x0 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_sync/sem.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_sync/sem.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_sync/sem.c.obj
@@ -710,10 +719,14 @@ Discarded input sections
                 0x0000000000000000        0xe CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .text.double2int64_shim
                 0x0000000000000000       0x1a CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .text.double2uint64_shim
+                0x0000000000000000       0x70 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .text.double2float_shim
                 0x0000000000000000       0x5c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .text.x2double_shims
                 0x0000000000000000       0x90 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .text.dunpacks
+                0x0000000000000000       0x3c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .text.dreduce  0x0000000000000000       0x82 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .text.dtan_shim
                 0x0000000000000000       0x20 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
@@ -784,6 +797,8 @@ Discarded input sections
  .text.float2int64
                 0x0000000000000000       0x14 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  .text.float2fix64
+                0x0000000000000000       0x14 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .text.__wrap___aeabi_f2ulz
                 0x0000000000000000       0x14 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  .text.float2ufix64
                 0x0000000000000000       0x14 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
@@ -890,6 +905,10 @@ Discarded input sections
                 0x0000000000000000       0x88 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
  .text.float232_shims
                 0x0000000000000000       0x18 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .text.float264_shims
+                0x0000000000000000       0x4c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .text.d2fix_a_float
+                0x0000000000000000       0x5c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
  .text.float2double_shim
                 0x0000000000000000       0x30 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
  .text          0x0000000000000000        0x0 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
@@ -1010,9 +1029,9 @@ Discarded input sections
  .comment       0x0000000000000000       0x58 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .ARM.attributes
                 0x0000000000000000       0x2c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .text          0x0000000000000000        0x0 /tmp/ccpB5n0R.o
- .data          0x0000000000000000        0x0 /tmp/ccpB5n0R.o
- .bss           0x0000000000000000        0x0 /tmp/ccpB5n0R.o
+ .text          0x0000000000000000        0x0 /tmp/ccZaeMPQ.o
+ .data          0x0000000000000000        0x0 /tmp/ccZaeMPQ.o
+ .bss           0x0000000000000000        0x0 /tmp/ccZaeMPQ.o
  .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-calloc.o)
@@ -1274,11 +1293,11 @@ LOAD /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thum
 .boot2          0x0000000010000000      0x100
                 0x0000000010000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x0000000010000000      0x100 /tmp/ccpB5n0R.o
+ .boot2         0x0000000010000000      0x100 /tmp/ccZaeMPQ.o
                 0x0000000010000100                __boot2_end__ = .
                 0x0000000000000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x0000000010000100     0x1e58
+.text           0x0000000010000100     0x1a88
                 0x0000000010000100                __logical_binary_start = .
  *(.vectors)
  .vectors       0x0000000010000100       0xd4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1344,206 +1363,174 @@ LOAD /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thum
  .text.frame_dummy
                 0x00000000100002ec       0x24 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
  .text.startup.main
-                0x0000000010000310       0x78 CMakeFiles/SinGen.dir/SinGen.c.obj
+                0x0000000010000310       0x58 CMakeFiles/SinGen.dir/SinGen.c.obj
                 0x0000000010000310                main
  .text.gpio_set_function
-                0x0000000010000388       0x30 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x0000000010000388                gpio_set_function
+                0x0000000010000368       0x30 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010000368                gpio_set_function
  .text.hw_claim_or_assert
-                0x00000000100003b8       0x44 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x00000000100003b8                hw_claim_or_assert
+                0x0000000010000398       0x44 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x0000000010000398                hw_claim_or_assert
  .text.running_on_fpga
-                0x00000000100003fc       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-                0x00000000100003fc                running_on_fpga
+                0x00000000100003dc       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x00000000100003dc                running_on_fpga
  .text.spin_locks_reset
-                0x000000001000040c       0x1c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x000000001000040c                spin_locks_reset
+                0x00000000100003ec       0x1c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x00000000100003ec                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x0000000010000428       0x18 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x0000000010000428                next_striped_spin_lock_num
+                0x0000000010000408       0x18 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x0000000010000408                next_striped_spin_lock_num
  .text.timer_pool_entry_comparator
-                0x0000000010000440       0x34 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010000440                timer_pool_entry_comparator
- .text.sleep_until_callback
-                0x0000000010000474       0x30 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000420       0x34 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000420                timer_pool_entry_comparator
  .text.add_alarm_under_lock.isra.0
-                0x00000000100004a4      0x104 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000454      0x104 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x00000000100005a8      0x1c8 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
- .text.alarm_pool_add_alarm_at.constprop.0
-                0x0000000010000770      0x11c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000558      0x1c8 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x000000001000088c       0x64 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
-                0x000000001000088c                alarm_pool_init_default
- .text.sleep_until
-                0x00000000100008f0       0xac CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
-                0x00000000100008f0                sleep_until
- .text.sleep_us
-                0x000000001000099c       0x30 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
-                0x000000001000099c                sleep_us
+                0x0000000010000720       0x64 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000720                alarm_pool_init_default
  .text.hardware_alarm_irq_handler
-                0x00000000100009cc       0xb8 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010000784       0xb8 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x0000000010000a84       0x18 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010000a84                hardware_alarm_claim
+                0x000000001000083c       0x18 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x000000001000083c                hardware_alarm_claim
  .text.time_us_64
-                0x0000000010000a9c       0x14 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010000a9c                time_us_64
- .text.busy_wait_until
-                0x0000000010000ab0       0x20 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010000ab0                busy_wait_until
+                0x0000000010000854       0x14 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010000854                time_us_64
  .text.hardware_alarm_set_callback
-                0x0000000010000ad0       0x8c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010000ad0                hardware_alarm_set_callback
+                0x0000000010000868       0x8c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010000868                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x0000000010000b5c       0xe0 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010000b5c                hardware_alarm_set_target
+                0x00000000100008f4       0xe0 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000000100008f4                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x0000000010000c3c       0x3c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010000c3c                hardware_alarm_cancel
+                0x00000000100009d4       0x3c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000000100009d4                hardware_alarm_cancel
  .text.lock_init
-                0x0000000010000c78       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_sync/lock_core.c.obj
-                0x0000000010000c78                lock_init
+                0x0000000010000a10       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x0000000010000a10                lock_init
  .text.mutex_init
-                0x0000000010000c88       0x1c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x0000000010000c88                mutex_init
+                0x0000000010000a20       0x1c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x0000000010000a20                mutex_init
  .text.recursive_mutex_init
-                0x0000000010000ca4       0x1c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x0000000010000ca4                recursive_mutex_init
+                0x0000000010000a3c       0x1c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x0000000010000a3c                recursive_mutex_init
  .text.ph_merge_nodes
-                0x0000000010000cc0       0x68 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010000a58       0x68 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_post_alloc_init
-                0x0000000010000d28       0x3c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010000d28                ph_post_alloc_init
+                0x0000000010000ac0       0x3c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010000ac0                ph_post_alloc_init
  .text.ph_merge_two_pass
-                0x0000000010000d64       0x9c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010000d64                ph_merge_two_pass
+                0x0000000010000afc       0x9c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010000afc                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x0000000010000e00       0xf8 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010000b98       0xf8 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head
-                0x0000000010000ef8       0xfc CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010000ef8                ph_remove_head
+                0x0000000010000c90       0xfc CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010000c90                ph_remove_head
  .text.ph_remove_and_free_node
-                0x0000000010000ff4       0x7c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010000ff4                ph_remove_and_free_node
+                0x0000000010000d8c       0x7c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010000d8c                ph_remove_and_free_node
  .text.runtime_init
-                0x0000000010001070       0xf0 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010001070                runtime_init
- .text.exit     0x0000000010001160        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010001160                exit
- .text.panic    0x0000000010001164       0x30 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010001164                panic
+                0x0000000010000e08       0xf0 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010000e08                runtime_init
+ .text.exit     0x0000000010000ef8        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010000ef8                exit
+ .text.panic    0x0000000010000efc       0x30 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010000efc                panic
  .text.hard_assertion_failure
-                0x0000000010001194        0xc CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010001194                hard_assertion_failure
+                0x0000000010000f2c        0xc CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010000f2c                hard_assertion_failure
  .text.clocks_init
-                0x00000000100011a0      0x2b0 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x00000000100011a0                clocks_init
+                0x0000000010000f38      0x2b0 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000000010000f38                clocks_init
  .text.irq_set_enabled
-                0x0000000010001450       0x24 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010001450                irq_set_enabled
+                0x00000000100011e8       0x24 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100011e8                irq_set_enabled
  .text.irq_get_vtable_handler
-                0x0000000010001474       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010001474                irq_get_vtable_handler
+                0x000000001000120c       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x000000001000120c                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x0000000010001484       0x54 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010001484                irq_set_exclusive_handler
+                0x000000001000121c       0x54 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x000000001000121c                irq_set_exclusive_handler
  .text.irq_remove_handler
-                0x00000000100014d8      0x1b4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100014d8                irq_remove_handler
+                0x0000000010001270      0x1b4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001270                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x000000001000168c       0xb4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x000000001000168c                irq_add_tail_to_free_list
+                0x0000000010001424       0xb4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001424                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x0000000010001740       0x24 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010001740                irq_init_priorities
+                0x00000000100014d8       0x24 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100014d8                irq_init_priorities
  .text.pll_init
-                0x0000000010001764       0xa8 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-                0x0000000010001764                pll_init
+                0x00000000100014fc       0xa8 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x00000000100014fc                pll_init
  .text.watchdog_start_tick
-                0x000000001000180c       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x000000001000180c                watchdog_start_tick
+                0x00000000100015a4       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x00000000100015a4                watchdog_start_tick
  .text.xosc_init
-                0x000000001000181c       0x28 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x000000001000181c                xosc_init
+                0x00000000100015b4       0x28 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x00000000100015b4                xosc_init
  .text._out_char
-                0x0000000010001844       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x00000000100015dc       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.weak_raw_vprintf
-                0x0000000010001854       0x30 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x0000000010001854                weak_raw_vprintf
- .text          0x0000000010001884       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x00000000100015ec       0x30 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x00000000100015ec                weak_raw_vprintf
+ .text          0x000000001000161c       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x0000000010001894       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x0000000010001894                rom_func_lookup
+                0x000000001000162c       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x000000001000162c                rom_func_lookup
  .text.rom_data_lookup
-                0x00000000100018a4       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x00000000100018a4                rom_data_lookup
+                0x000000001000163c       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x000000001000163c                rom_data_lookup
  .text.rom_funcs_lookup
-                0x00000000100018b4       0x44 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x00000000100018b4                rom_funcs_lookup
+                0x000000001000164c       0x44 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x000000001000164c                rom_funcs_lookup
  .text.__wrap___aeabi_uidiv
-                0x00000000100018f8       0x4c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x00000000100018f8                __wrap___aeabi_uidiv
-                0x00000000100018f8                __wrap___aeabi_uidivmod
-                0x00000000100018f8                div_u32u32
-                0x00000000100018f8                divmod_u32u32
-                0x0000000010001900                divmod_u32u32_unsafe
-                0x0000000010001928                divmod_u32u32_savestate
+                0x0000000010001690       0x4c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x0000000010001690                __wrap___aeabi_uidiv
+                0x0000000010001690                __wrap___aeabi_uidivmod
+                0x0000000010001690                div_u32u32
+                0x0000000010001690                divmod_u32u32
+                0x0000000010001698                divmod_u32u32_unsafe
+                0x00000000100016c0                divmod_u32u32_savestate
  .text.__aeabi_double_init
-                0x0000000010001944       0x94 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x0000000010001944                __aeabi_double_init
+                0x00000000100016dc       0x94 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x00000000100016dc                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x00000000100019d8       0x2c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x00000000100019d8                double_table_shim_on_use_helper
- .text.double2uint64_shim
-                0x0000000010001a04       0x70 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010001a04                double2uint64_shim
-                0x0000000010001a06                double2ufix64_shim
-                0x0000000010001a26                d2fix_a
- .text.dunpacks
-                0x0000000010001a74       0x3c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010001a74                dunpacks
- .text.__wrap___aeabi_f2ulz
-                0x0000000010001ab0       0x14 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x0000000010001ab0                __wrap___aeabi_f2ulz
+                0x0000000010001770       0x2c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010001770                double_table_shim_on_use_helper
  .text.__aeabi_float_init
-                0x0000000010001ac4       0x64 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x0000000010001ac4                __aeabi_float_init
+                0x000000001000179c       0x64 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x000000001000179c                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x0000000010001b28       0x2c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x0000000010001b28                float_table_shim_on_use_helper
- .text.float264_shims
-                0x0000000010001b54       0x4c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x0000000010001b54                float2int64_shim
-                0x0000000010001b56                float2fix64_shim
-                0x0000000010001b5e                float2uint64_shim
-                0x0000000010001b60                float2ufix64_shim
- .text.d2fix_a_float
-                0x0000000010001ba0       0x5c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .text          0x0000000010001bfc       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x0000000010001bfc                __aeabi_mem_init
- .text.memcpy   0x0000000010001c0c        0xc CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x0000000010001c0c                __wrap___aeabi_memcpy
-                0x0000000010001c0c                __wrap_memcpy
+                0x0000000010001800       0x2c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x0000000010001800                float_table_shim_on_use_helper
+ .text          0x000000001000182c       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x000000001000182c                __aeabi_mem_init
+ .text.memcpy   0x000000001000183c        0xc CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x000000001000183c                __wrap___aeabi_memcpy
+                0x000000001000183c                __wrap_memcpy
  .text.stdio_out_chars_no_crlf
-                0x0000000010001c18       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010001848       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_out_chars_crlf
-                0x0000000010001c28       0xb4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010001858       0xb4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_put_string.isra.0
-                0x0000000010001cdc       0xfc CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x000000001000190c       0xfc CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.__wrap_putchar
-                0x0000000010001dd8       0xa0 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010001dd8                __wrap_putchar
+                0x0000000010001a08       0xa0 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010001a08                __wrap_putchar
  .text.__wrap_puts
-                0x0000000010001e78       0x3c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010001e78                __wrap_puts
- .text.strlen   0x0000000010001eb4       0x5c /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
-                0x0000000010001eb4                strlen
+                0x0000000010001aa8       0x3c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010001aa8                __wrap_puts
+ .text.strlen   0x0000000010001ae4       0x5c /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
+                0x0000000010001ae4                strlen
  *(.fini)
- .fini          0x0000000010001f10        0x4 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crti.o
-                0x0000000010001f10                _fini
- *fill*         0x0000000010001f14        0x4 
- .fini.__stub   0x0000000010001f18       0x40 linker stubs
+ .fini          0x0000000010001b40        0x4 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crti.o
+                0x0000000010001b40                _fini
+ *fill*         0x0000000010001b44        0x4 
+ .fini.__stub   0x0000000010001b48       0x40 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -1555,82 +1542,82 @@ LOAD /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thum
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x0000000010001f58        0x0 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x0000000010001f58                . = ALIGN (0x4)
+ .eh_frame      0x0000000010001b88        0x0 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000010001b88                . = ALIGN (0x4)
 
-.glue_7         0x0000000010001f58        0x0
- .glue_7        0x0000000010001f58        0x0 linker stubs
+.glue_7         0x0000000010001b88        0x0
+ .glue_7        0x0000000010001b88        0x0 linker stubs
 
-.glue_7t        0x0000000010001f58        0x0
- .glue_7t       0x0000000010001f58        0x0 linker stubs
+.glue_7t        0x0000000010001b88        0x0
+ .glue_7t       0x0000000010001b88        0x0 linker stubs
 
-.vfp11_veneer   0x0000000010001f58        0x0
- .vfp11_veneer  0x0000000010001f58        0x0 linker stubs
+.vfp11_veneer   0x0000000010001b88        0x0
+ .vfp11_veneer  0x0000000010001b88        0x0 linker stubs
 
-.v4_bx          0x0000000010001f58        0x0
- .v4_bx         0x0000000010001f58        0x0 linker stubs
+.v4_bx          0x0000000010001b88        0x0
+ .v4_bx         0x0000000010001b88        0x0 linker stubs
 
-.iplt           0x0000000010001f58        0x0
- .iplt          0x0000000010001f58        0x0 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x0000000010001b88        0x0
+ .iplt          0x0000000010001b88        0x0 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x0000000010001f58       0xa8
+.rodata         0x0000000010001b88       0xa8
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.hardware_alarm_claim.str1.4
-                0x0000000010001f58       0x22 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x0000000010001f7a        0x2 
+                0x0000000010001b88       0x22 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x0000000010001baa        0x2 
  .rodata.panic.str1.4
-                0x0000000010001f7c       0x12 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x0000000010001f8e        0x2 
+                0x0000000010001bac       0x12 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x0000000010001bbe        0x2 
  .rodata.hard_assertion_failure.str1.4
-                0x0000000010001f90        0xc CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010001bc0        0xc CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata.str1.4
-                0x0000000010001f9c       0x3c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010001bcc       0x3c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_44
-                0x0000000010001fd8        0xc CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010001c08        0xc CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x0000000010001fe4        0xc CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010001c14        0xc CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x0000000010001ff0        0xc CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010001c20        0xc CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.0
-                0x0000000010001ffc        0x2 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010002000                . = ALIGN (0x4)
- *fill*         0x0000000010001ffe        0x2 
+                0x0000000010001c2c        0x2 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010001c30                . = ALIGN (0x4)
+ *fill*         0x0000000010001c2e        0x2 
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x0000000010002000                . = ALIGN (0x4)
+                0x0000000010001c30                . = ALIGN (0x4)
 
-.rel.dyn        0x0000000010002000        0x0
- .rel.iplt      0x0000000010002000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x0000000010001c30        0x0
+ .rel.iplt      0x0000000010001c30        0x0 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000010002000                __exidx_start = .
+                0x0000000010001c30                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0000000010002000                __exidx_end = .
-                0x0000000010002000                . = ALIGN (0x4)
-                0x0000000010002000                __binary_info_start = .
+                0x0000000010001c30                __exidx_end = .
+                0x0000000010001c30                . = ALIGN (0x4)
+                0x0000000010001c30                __binary_info_start = .
 
-.binary_info    0x0000000010002000       0x1c
+.binary_info    0x0000000010001c30       0x1c
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr22
-                0x0000000010002000        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010001c30        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x0000000010002004        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010001c34        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x0000000010002008        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010001c38        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x000000001000200c        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010001c3c        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x0000000010002010        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010001c40        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x0000000010002014        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010001c44        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr81
-                0x0000000010002018        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010001c48        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
-                0x000000001000201c                __binary_info_end = .
-                0x000000001000201c                . = ALIGN (0x4)
-                0x000000001000201c                __etext = .
+                0x0000000010001c4c                __binary_info_end = .
+                0x0000000010001c4c                . = ALIGN (0x4)
+                0x0000000010001c4c                __etext = .
 
 .ram_vector_table
                 0x0000000020000000       0xc0
@@ -1639,7 +1626,7 @@ LOAD /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thum
                 0x0000000020000000       0xc0 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x0000000020000000                ram_vector_table
 
-.data           0x00000000200000c0    0x13dec load address 0x000000001000201c
+.data           0x00000000200000c0      0x56c load address 0x0000000010001c4c
                 0x00000000200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -1660,142 +1647,140 @@ LOAD /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thum
  *(.rodata*)
                 0x0000000020000178                . = ALIGN (0x4)
  *(.data*)
- .data.hertz    0x0000000020000178    0x13880 CMakeFiles/SinGen.dir/SinGen.c.obj
-                0x0000000020000178                hertz
- .data.valores  0x00000000200139f8      0x400 CMakeFiles/SinGen.dir/SinGen.c.obj
-                0x00000000200139f8                valores
+ .data.valores  0x0000000020000178      0x400 CMakeFiles/SinGen.dir/SinGen.c.obj
+                0x0000000020000178                valores
  .data.striped_spin_lock_num
-                0x0000000020013df8        0x1 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- *fill*         0x0000000020013df9        0x3 
+                0x0000000020000578        0x1 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ *fill*         0x0000000020000579        0x3 
  .data.default_alarm_pool
-                0x0000000020013dfc       0x18 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
+                0x000000002000057c       0x18 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
  .data.default_alarm_pool_heap
-                0x0000000020013e14       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
- .data          0x0000000020013e24       0x48 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
-                0x0000000020013e24                irq_handler_chain_slots
-                0x0000000020013e54                irq_handler_chain_first_slot
-                0x0000000020013e5e                irq_handler_chain_remove_tail
- *fill*         0x0000000020013e6c        0x4 
+                0x0000000020000594       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
+ .data          0x00000000200005a4       0x48 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+                0x00000000200005a4                irq_handler_chain_slots
+                0x00000000200005d4                irq_handler_chain_first_slot
+                0x00000000200005de                irq_handler_chain_remove_tail
+ *fill*         0x00000000200005ec        0x4 
  .data.aeabi_bits_funcs
-                0x0000000020013e70       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
-                0x0000000020013e70                aeabi_bits_funcs
-                0x0000000020013e80                aeabi_bits_funcs_end
+                0x00000000200005f0       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x00000000200005f0                aeabi_bits_funcs
+                0x0000000020000600                aeabi_bits_funcs_end
  .data.aeabi_mem_funcs
-                0x0000000020013e80       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x0000000020013e80                aeabi_mem_funcs
-                0x0000000020013e90                aeabi_mem_funcs_end
-                0x0000000020013e90                . = ALIGN (0x4)
+                0x0000000020000600       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000020000600                aeabi_mem_funcs
+                0x0000000020000610                aeabi_mem_funcs_end
+                0x0000000020000610                . = ALIGN (0x4)
  *(.after_data.*)
-                0x0000000020013e90                . = ALIGN (0x4)
-                0x0000000020013e90                PROVIDE (__mutex_array_start = .)
+                0x0000000020000610                . = ALIGN (0x4)
+                0x0000000020000610                PROVIDE (__mutex_array_start = .)
  *(SORT_BY_NAME(.mutex_array.*))
  *(.mutex_array)
- .mutex_array   0x0000000020013e90        0x8 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000020013e98                PROVIDE (__mutex_array_end = .)
-                0x0000000020013e98                . = ALIGN (0x4)
-                0x0000000020013e98                PROVIDE (__preinit_array_start = .)
+ .mutex_array   0x0000000020000610        0x8 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000020000618                PROVIDE (__mutex_array_end = .)
+                0x0000000020000618                . = ALIGN (0x4)
+                0x0000000020000618                PROVIDE (__preinit_array_start = .)
  *(SORT_BY_NAME(.preinit_array.*))
  .preinit_array.00001
-                0x0000000020013e98        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000020000618        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
  .preinit_array.00010
-                0x0000000020013e9c        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x000000002000061c        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .preinit_array.00020
-                0x0000000020013ea0        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000020000620        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
  .preinit_array.00020
-                0x0000000020013ea4        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x0000000020000624        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  *(.preinit_array)
-                0x0000000020013ea8                PROVIDE (__preinit_array_end = .)
-                0x0000000020013ea8                . = ALIGN (0x4)
-                0x0000000020013ea8                PROVIDE (__init_array_start = .)
+                0x0000000020000628                PROVIDE (__preinit_array_end = .)
+                0x0000000020000628                . = ALIGN (0x4)
+                0x0000000020000628                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
- .init_array    0x0000000020013ea8        0x4 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x0000000020013eac                PROVIDE (__init_array_end = .)
-                0x0000000020013eac                . = ALIGN (0x4)
+ .init_array    0x0000000020000628        0x4 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x000000002000062c                PROVIDE (__init_array_end = .)
+                0x000000002000062c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array)
                 [!provide]                        PROVIDE (__fini_array_end = .)
  *(.jcr)
-                0x0000000020013eac                . = ALIGN (0x4)
-                0x0000000020013eac                __data_end__ = .
+                0x000000002000062c                . = ALIGN (0x4)
+                0x000000002000062c                __data_end__ = .
 
 .tm_clone_table
-                0x0000000020013eac        0x0 load address 0x0000000010015e08
+                0x000000002000062c        0x0 load address 0x00000000100021b8
  .tm_clone_table
-                0x0000000020013eac        0x0 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x000000002000062c        0x0 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
-                0x0000000020013eac        0x0 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtend.o
+                0x000000002000062c        0x0 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x0000000020013eac        0x0 load address 0x0000000010015e08
- .igot.plt      0x0000000020013eac        0x0 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
+.igot.plt       0x000000002000062c        0x0 load address 0x00000000100021b8
+ .igot.plt      0x000000002000062c        0x0 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x0000000020013eac        0x0 load address 0x0000000010015e08
-                0x0000000020013eac                . = ALIGN (0x4)
+                0x000000002000062c        0x0 load address 0x00000000100021b8
+                0x000000002000062c                . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x0000000020040000        0x0 load address 0x0000000010015e08
+.scratch_x      0x0000000020040000        0x0 load address 0x00000000100021b8
                 0x0000000020040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x0000000020040000                . = ALIGN (0x4)
                 0x0000000020040000                __scratch_x_end__ = .
-                0x0000000010015e08                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x00000000100021b8                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x0000000020041000        0x0 load address 0x0000000010015e08
+.scratch_y      0x0000000020041000        0x0 load address 0x00000000100021b8
                 0x0000000020041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x0000000020041000                . = ALIGN (0x4)
                 0x0000000020041000                __scratch_y_end__ = .
-                0x0000000010015e08                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x00000000100021b8                __scratch_y_source__ = LOADADDR (.scratch_y)
 
-.bss            0x0000000020013eb0      0x3c8
-                0x0000000020013eb0                . = ALIGN (0x4)
-                0x0000000020013eb0                __bss_start__ = .
+.bss            0x0000000020000630      0x3c8
+                0x0000000020000630                . = ALIGN (0x4)
+                0x0000000020000630                __bss_start__ = .
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.bss*)))
  .bss.default_alarm_pool_entries
-                0x0000000020013eb0      0x100 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
- .bss.sd_table  0x0000000020013fb0      0x100 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x0000000020013fb0                sd_table
- .bss.sf_table  0x00000000200140b0      0x100 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x00000000200140b0                sf_table
+                0x0000000020000630      0x100 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
+ .bss.sd_table  0x0000000020000730      0x100 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x0000000020000730                sd_table
+ .bss.sf_table  0x0000000020000830      0x100 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x0000000020000830                sf_table
  .bss.alarm_callbacks
-                0x00000000200141b0       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000020000930       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.configured_freq
-                0x00000000200141c0       0x28 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000000020000940       0x28 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
  .bss.default_alarm_pool_entry_ids_high
-                0x00000000200141e8       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000020000968       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
  .bss.default_alarm_pool_heap_nodes
-                0x00000000200141f8       0x30 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
- .bss.drivers   0x0000000020014228        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .bss.filter    0x000000002001422c        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000020000978       0x30 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
+ .bss.drivers   0x00000000200009a8        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .bss.filter    0x00000000200009ac        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .bss.lazy_vsnprintf
-                0x0000000020014230        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .bss.object.0  0x0000000020014234       0x18 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
- .bss.pools     0x000000002001424c       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000200009b0        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .bss.object.0  0x00000000200009b4       0x18 /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
+ .bss.pools     0x00000000200009cc       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
  .bss.sf_clz_func
-                0x000000002001425c        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x000000002001425c                sf_clz_func
+                0x00000000200009dc        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x00000000200009dc                sf_clz_func
  .bss.sleep_notifier
-                0x0000000020014260        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000200009e0        0x4 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/common/pico_time/time.c.obj
  .bss.target_hi
-                0x0000000020014264       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .bss.claimed   0x0000000020014274        0x1 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000000200009e4       0x10 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .bss.claimed   0x00000000200009f4        0x1 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.irq_hander_chain_free_slot_head
-                0x0000000020014275        0x1 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000200009f5        0x1 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .bss.timer_callbacks_pending
-                0x0000000020014276        0x1 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000000200009f6        0x1 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  *(COMMON)
-                0x0000000020014278                . = ALIGN (0x4)
- *fill*         0x0000000020014277        0x1 
-                0x0000000020014278                __bss_end__ = .
+                0x00000000200009f8                . = ALIGN (0x4)
+ *fill*         0x00000000200009f7        0x1 
+                0x00000000200009f8                __bss_end__ = .
 
-.heap           0x0000000020014278      0x800
-                0x0000000020014278                __end__ = .
-                0x0000000020014278                end = __end__
+.heap           0x00000000200009f8      0x800
+                0x00000000200009f8                __end__ = .
+                0x00000000200009f8                end = __end__
  *(.heap*)
- .heap          0x0000000020014278      0x800 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
-                0x0000000020014a78                __HeapLimit = .
+ .heap          0x00000000200009f8      0x800 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+                0x00000000200011f8                __HeapLimit = .
 
 .stack1_dummy   0x0000000020040000        0x0
  *(.stack1*)
@@ -1804,8 +1789,8 @@ LOAD /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thum
  *(.stack*)
  .stack         0x0000000020041000      0x800 CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x0000000010015e08        0x0
-                0x0000000010015e08                __flash_binary_end = .
+.flash_end      0x00000000100021b8        0x0
+                0x00000000100021b8                __flash_binary_end = .
                 0x0000000020040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x0000000020041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x0000000020042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -1860,7 +1845,7 @@ LOAD CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_
 LOAD CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 LOAD CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 LOAD CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-LOAD /tmp/ccpB5n0R.o
+LOAD /tmp/ccZaeMPQ.o
 LOAD /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -1946,7 +1931,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x0000000000000518       0x2c CMakeFiles/SinGen.dir/home/santiago/.pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .ARM.attributes
-                0x0000000000000544       0x22 /tmp/ccpB5n0R.o
+                0x0000000000000544       0x22 /tmp/ccZaeMPQ.o
  .ARM.attributes
                 0x0000000000000566       0x1e /usr/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
